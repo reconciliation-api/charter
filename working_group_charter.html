@@ -148,7 +148,18 @@
 
       <section id="background" class="background">
         <h2>Motivation and Background</h2>
-        <p><i class="todo">Motivation and brief background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry.</i></p>
+        <p>
+            Integrating data from sources which do not share common unique identifiers often requires matching (or reconciling, merging) records which refer to the same entities. The promises of the Linked Open Data movement, the ability to mix up data from different publishers expressed in a common language (such as RDF) rely on being able to identify identities across services. Due to the Web's decentralized nature, there is nothing preventing a service from publishing a new URI for a resource or concept which is already expressed by another URI.       
+        </p>
+        <p>
+            One can determine if two database records refer to the same entity by comparing their attributes. For instance, two entries about cities bearing the same name, in the same country and with the same mayor are likely to refer to the same city. The reconciliation API that we want to standardize makes it easier to discover such matches. It is a protocol that a data provider can implement, enabling its consumers to efficiently match their own data to the entities represented by the provider. 
+        </p>
+        <p>
+            The reconciliation API was originally designed by Metaweb as a protocol for a use case in Gridworks (now OpenRefine) where entities from a local dataset are matched to Freebase records during import. It was later generalized so any database could implement it, allowing data providers such as Crossref, Nomisma, Getty, Wikidata, and VIAF to to be added as a Standard Service in OpenRefine. The API, originally documented on OpenRefine’s wiki also supports additional optional features like preview for entities, auto-suggest for various inputs, and, since 2018, data extension for pulling data from reconciled records in the target database.
+        </p>
+        <p>
+            In 2019 the W3C Entity Reconciliation Community Group formed to promote and refine the specification beyond OpenRefine. It published two versions of the specification as CG reports.
+        </p>
       </section>
 
       <section id="scope" class="scope">
