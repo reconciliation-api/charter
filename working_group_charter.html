@@ -144,18 +144,22 @@
         </table>
 
       <section id="background" class="background">
-        <h2>Motivation and Background</h2>
+        <h2>Motivation</h2>
+        <p>
+            Many applications provide a way to link external data to textual entities like places, persons, etc. For instance, Excel has <a href=" https://learn.microsoft.com/en-us/office/dev/add-ins/excel/excel-data-types-linked-entity-cell-values">linked entity cell values</a>. These links disambiguate the names we use for these entities and provide additional information, like geo coordinates for places or life dates for persons. For every external data provider (like Wikidata, ORCID, GeoNames, etc.), Excel requires a dedicated add-in to connect to that provider. At the same time, every other application interested in integrating that same data provider has to implement their own extension.
+        </p>
+        <p>
+            With a standardized protocol, 1.) a single client implementation can integrate any conforming data service and 2.) a single data service implementation can be used in any conforming client application. So instead of implementing separate Excel add-ins for every data source, we can have a single Excel reconciliation client that can talk to any data provider, and instead of implementing separate Wikidata extensions for every application, we can have a single Wikidata reconciliation service that can be used in any client application.
+        </p>
         <p>
             Because the Web is decentralized, any service can publish a new URI for an entity or concept that already exists elsewhere. As a result, entities have multiple identifiers and varying attributes or descriptions across the web. Linked Open Data seeks to enable the integration of data from different publishers. To accomplish this for a specific entity, it is necessary to determine which URIs refer to the same entity across different services by comparing attributes, investigating discrepancies, and updating records accordingly. Providing an API to support this reconciliation process — which includes matching, previewing, suggesting, and extending — is the primary motivation behind this working group.
         </p>
         <p>
             One can determine if two database records refer to the same entity by comparing their attributes. For instance, two entries about cities bearing the same name, in the same country and with the same mayor are likely to refer to the same city. The reconciliation API that we want to standardize makes it easier to discover such matches. It is a protocol that a data provider can implement, enabling its consumers to efficiently match their own data to the entities represented by the provider. 
         </p>
+        <h2>Background</h2>
         <p>
-            The reconciliation API was originally designed by Metaweb as a protocol for a use case in Gridworks (now OpenRefine) where entities from a local dataset are matched to Freebase records during import. It was later generalized so any database could implement it, allowing data providers such as Crossref, Nomisma, Getty, Wikidata, and VIAF to be added as a Standard Service in OpenRefine. The API, originally documented on OpenRefine’s wiki also supports additional optional features like preview for entities, auto-suggest for various inputs, and, since 2018, data extension for pulling data from reconciled records in the target database.
-        </p>
-        <p>
-            In 2019 the W3C Entity Reconciliation Community Group formed to promote and refine the specification beyond OpenRefine. It published two versions of the specification as CG reports.
+            The reconciliation API was originally designed in 2008 by Metaweb as a protocol for a use case in Freebase Gridworks (later Google Refine, since 2012 OpenRefine), where entities from a local dataset are matched to Freebase records during import. It was later generalized so any database could implement it, allowing data providers such as Crossref, Nomisma, Getty, Wikidata, and VIAF to be added as a Standard Service in OpenRefine. The API, originally documented on OpenRefine's wiki, also supports additional optional features like preview for entities, auto-suggest for various inputs, and, since 2018, data extension for pulling data from reconciled records in the target database. In 2019 the W3C Entity Reconciliation Community Group formed to promote and refine the specification beyond OpenRefine. It published two versions of the specification as CG reports.
         </p>
       </section>
 
