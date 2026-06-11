@@ -155,9 +155,6 @@
             With a standardized protocol, 1.) a single client implementation can integrate any conforming data service and 2.) a single data service implementation can be used in any conforming client application. So instead of implementing separate Excel add-ins or Grist importers for every data source, we can have a single reconciliation client in Excel or Grist that can talk to any data provider, and instead of implementing separate Wikidata extensions for every application, we can have a single Wikidata reconciliation service that can be used in any client application.
         </p>
         <p>
-            Because the Web is decentralized, any service can publish a new URI for an entity or concept that already exists elsewhere. As a result, entities have multiple identifiers and varying attributes or descriptions across the web. Linked Open Data seeks to enable the integration of data from different publishers. To accomplish this for a specific entity, it is necessary to determine which URIs refer to the same entity across different services by comparing attributes (e.g. the name, country and mayor of a city), investigating discrepancies, and updating records accordingly.
-        </p>
-        <p>
             Providing an API to support this reconciliation process, which includes matching, previewing, suggesting, and extending, is the primary motivation behind this working group. It aims to develop a protocol that 1.) a tool provider can implement, enabling its users to efficiently integrate external data sources, and 2.) a data provider can implement, enabling its consumers to efficiently match their own data to the entities represented by the provider.
         </p>
         <h2>Background</h2>
